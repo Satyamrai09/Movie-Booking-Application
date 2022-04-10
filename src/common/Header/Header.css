@@ -1,4 +1,40 @@
 .header{
     background-color: black;
-    color: aquamarine;
+    height: 36px;
+    padding: 8px 32px 8px 16px;
 }
+.logo{
+ height: 35px;
+}
+.rotate {
+    animation: rotation 8s;
+  }
+  
+  .linear {
+    animation-timing-function: linear;
+  }
+  
+  .infinite {
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  /* .headerSecond{
+    background-color: #ff9999;
+    text-align: center;
+    /* padding: 8px; */
+    /* font-size: 1em;
+    margin-left: 0px;
+    margin-right: 0px;
+   
+  }
+  .headinSpan{
+    padding: 8px;
+  } */ 
