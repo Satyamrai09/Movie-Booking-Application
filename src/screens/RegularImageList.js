@@ -3,8 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
-import IconButton from "@material-ui/core/IconButton";
-import InfoIcon from "@material-ui/icons/Info";
+// import IconButton from "@material-ui/core/IconButton";
+// import InfoIcon from "@material-ui/icons/Info";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function TitlebarImageList(props) {
+export default function RegularImageList(props) {
   const classes = useStyles();
 
   return (
@@ -40,7 +40,7 @@ export default function TitlebarImageList(props) {
           <ImageListItem key="Subheader" cols={4} style={{ height: "auto" }}>
             {/* <ListSubheader component="div">December</ListSubheader> */}
           </ImageListItem>
-          {props.MoviesData.map((item) => (
+          {props.moviesData.map((item) => (
             <ImageListItem className="leftListItem" key={item.img}>
               <img src={item.poster_url} alt={item.title} />
               <ImageListItemBar

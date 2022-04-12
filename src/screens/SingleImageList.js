@@ -35,7 +35,7 @@ export default function SingleImageList(props) {
   return (
     <div className={classes.root}>
       <ImageList className={classes.imageList} cols={6} rowHeight={350}>
-        {props.MoviesData
+        {props.moviesData
         .map((item) => (
           <ImageListItem key={item.id}>
             <img 
