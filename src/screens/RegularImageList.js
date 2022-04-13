@@ -3,8 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import ImageList from "@material-ui/core/ImageList";
 import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
-// import IconButton from "@material-ui/core/IconButton";
-// import InfoIcon from "@material-ui/icons/Info";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     overflow: "hidden",
   },
+
   imageList: {
     width: "100%",
     height: 450,
@@ -30,24 +30,29 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RegularImageList(props) {
+export default function TitlebarImageList(props) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <div className={classes.container}>
         <ImageList rowHeight={350} cols={4} className={classes.imageList}>
-          <ImageListItem key="Subheader" cols={4} style={{ height: "auto" }}>
-            {/* <ListSubheader component="div">December</ListSubheader> */}
-          </ImageListItem>
+          
           {props.moviesData.map((item) => (
-            <ImageListItem className="leftListItem" key={item.img}>
-              <img src={item.poster_url} alt={item.title} />
-              <ImageListItemBar
-                title={item.title}
-                subtitle={<span>Release Date: {Date(item.release_date)}</span>}
-              />
+
+            
+            <ImageListItem key={item.title} className="leftListItem">
+            
+                <Link to="/details" state={{ movie: item }}>
+                <img className="image" src={item.poster_url} alt={item.title} />
+                </Link>
+                <ImageListItemBar
+                  title={item.title}
+                  subtitle={<span>Release Date: {Date(item.release_date)}</span>}
+                />
+              
             </ImageListItem>
+
           ))}
         </ImageList>
       </div>

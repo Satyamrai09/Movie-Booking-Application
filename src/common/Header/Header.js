@@ -22,9 +22,7 @@ export default class Header extends Component {
             </svg>
           </div>
         </div>
-        <div className="headerSecond">
-          <span className="headinSpan">Upcoming Movies</span>
-        </div>
+        
       </div>
     );
   }
