@@ -2,7 +2,7 @@ import React from "react";
 import "./Details.css";
 import "../../common/header/Header";
 import Header from "../../common/header/Header.js";
-import { Typography, GridList, GridListTileBar, GridListTile } from "@material-ui/core";
+import { ImageList,Typography, GridList, GridListTileBar, GridListTile } from "@material-ui/core";
 import { Link, useLocation } from "react-router-dom";
 import Trailer from "./Trailer";
 import StarBorderIcon from '@material-ui/icons/StarBorder';

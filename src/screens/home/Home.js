@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import "../../common/header/Header";
 import Header from "../../common/header/Header.js";
 import SingleImageList from "../../screens/SingleImageList";
 import moviesData from "../../common/MoviesData";
@@ -57,7 +58,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <Header />
+         <Header btnType="login" variant="contained" buttonName="LOGIN" />
         <div className="headerSecond">
           <span className="headinSpan">Upcoming Movies</span>
         </div>

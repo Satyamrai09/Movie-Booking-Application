@@ -1,28 +1,18 @@
 .header{
-    background-color: black;
-    height: 36px;
-    padding: 8px 32px 8px 16px;
+  background-color: #222;
+  height: 36px;
+  padding: 8px 32px 8px 16px;
 }
-.logo{
- height: 35px;
+.mylogo{
+  background-color: #ff7f7f;
+  height: 35px;
+  animation: rotateAnim 8s infinite linear normal;
 }
-.rotate {
-    animation: rotation 8s;
+@keyframes rotateAnim {
+  from{
+      transform: rotateY(1deg);
   }
-  
-  .linear {
-    animation-timing-function: linear;
+  to{
+      transform: rotateY(360deg);
   }
-  
-  .infinite {
-    animation-iteration-count: infinite;
-  }
-  
-  @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
+}
